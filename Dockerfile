@@ -1,8 +1,23 @@
-# frontend/Dockerfile
+# Use the Node.js 18 image as the base
 FROM node:18
+
+# Set the working directory
 WORKDIR /app
-COPY . .
+
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
+
+# Install dependencies
 RUN npm install
-RUN npm run build  # Add this line to create the production build
-EXPOSE 3000
-CMD ["npx", "next", "start", "-p", "3000"]
+
+# Copy the rest of the application code
+COPY . .
+
+# Build the application
+RUN npm run build
+
+# Expose the application port
+EXPOSE 9101
+
+# Start the Next.js application
+CMD ["npx", "next", "start", "-p", "9101"]

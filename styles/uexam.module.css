@@ -1,0 +1,101 @@
+/* Container for the exam page */
+.container {
+  max-width: 600px; /* Reduced max-width for a smaller container */
+  margin: 30px auto; /* Slightly reduced margin for better vertical spacing */
+  padding: 20px; /* Reduced padding to make it more compact */
+  background: #1e1e1e; /* Slightly lighter dark background for better readability */
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow for more depth */
+}
+
+/* Header style */
+.header {
+  text-align: center;
+  font-size: 26px; /* Slightly reduced font size */
+  color: #ffffff;
+  margin-bottom: 25px; /* Reduced spacing */
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; /* Added bold for emphasis */
+}
+
+/* Exam form styling */
+.examForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Reduced gap for a more compact form */
+}
+
+/* Question block styling */
+.questionBlock {
+  padding: 15px; /* Reduced padding to make blocks more compact */
+  background-color: #8B0000; /* Dark red for consistency */
+  border-radius: 8px;
+  margin-bottom: 10px; /* Reduced margin */
+  color: #ffffff; /* White text for contrast */
+  font-size: 16px; /* Reduced font size for readability */
+}
+
+/* Text input for answers */
+.textInput {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  margin-top: 10px;
+  background-color: #2d2d2d; /* Darker background for inputs */
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #555555;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.textInput:focus {
+  border-color: #28a745; /* Green border on focus for consistency */
+  background-color: #333333; /* Slightly brighter background on focus */
+}
+
+/* Submit button styling */
+.submitButton {
+  padding: 12px 20px; /* Reduced padding */
+  background-color: #860000; /* Green button */
+  color: #fff9f9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold; /* Bold text for button */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #882121; /* Darker hover effect */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Result display styling */
+.result {
+  text-align: center;
+  font-size: 22px; /* Slightly reduced result text */
+  color: #ffffff;
+  margin-top: 30px; /* Reduced margin */
+  font-weight: bold;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px; /* Reduced padding for mobile */
+  }
+
+  .header {
+    font-size: 20px; /* Reduced header size for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .submitButton {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .result {
+    font-size: 18px;
+  }
+}

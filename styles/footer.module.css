@@ -1,0 +1,44 @@
+/* Footer - fixed at the bottom */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #20232A;
+  color: #ffffff;
+  padding: 8px 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  border-top: 2px solid #8B0000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.centerName {
+  font-size: 14px;
+  color: #FFD700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer p {
+  font-size: 12px;
+  margin: 2px 0;
+}
+
+.footer small {
+  font-size: 10px;
+  margin-top: 5px;
+  display: block;
+  color: #ddd;
+}
+
+
+.mainContent {
+  padding-bottom: 60px; /* Ensure padding is greater than the footer height */
+}
