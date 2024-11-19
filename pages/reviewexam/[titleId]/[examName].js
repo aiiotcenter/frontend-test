@@ -21,7 +21,7 @@ export default function ReviewExams() {
           if (data && typeof data === 'object') {
             setExam(data);
             if (data.examdata) {
-              const examContentResponse = await fetch(`/data/${encodeURIComponent(data.examdata)}`);
+              const examContentResponse = await fetch(`/api/getFile?filename=${encodeURIComponent(data.examdata)}`);
               if (examContentResponse.ok) {
                 const examContent = await examContentResponse.json();
                 if (examContent) {
@@ -186,7 +186,7 @@ export default function ReviewExams() {
   <div>
     <label>Image:</label>
     <img
-      src={`http://127.0.0.1:5501/examgenerator-backend/PythonFlask/images/${editedExamContent.questions[currentQuestionIndex].imagePath.split('/').pop()}`}
+      src={`/api/getImage?filename=${editedExamContent.questions[currentQuestionIndex].imagePath.split('/').pop()}`}
       alt="Question Illustration"
       className={styles.image}
     />

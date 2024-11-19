@@ -79,8 +79,7 @@ export default function Titles() {
     setShowExamsModal(false);
 
     try {
-      const examContentResponse = await fetch(
-        `/data/examFiles/${encodeURIComponent(examDataPath)}`
+      const examContentResponse = await fetch(`/api/getFile?filename=${encodeURIComponent(examDataPath)}`
       );
       if (examContentResponse.ok) {
         const examContent = await examContentResponse.json();
@@ -226,7 +225,7 @@ export default function Titles() {
                 {examContent.questions[currentQuestionIndex]?.imagePath && (
                   <div className={styles.imageContainer}>
                     <img
-                      src={`http://127.0.0.1:5501/examgenerator-backend/PythonFlask/images/${examContent.questions[currentQuestionIndex].imagePath.split('/').pop()}`}
+                      src={`/api/getImage?filename=${examContent.questions[currentQuestionIndex].imagePath.split('/').pop()}`}
                       alt="Question"
                       className={styles.questionImage}
                     />
